@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Template</title>
+</head>
+
+<body>
+    <script>
+        /*String template mempermudah jika template memanggil banyak variable*/
+        /*Untuk Menggunakan Fitur String Template
+        harus menggunakan backtip ``
+        */
+        const name = "Stefan";
+        const template = `Nama : ${name}`;
+        console.info(template);
+
+        /*Bisa juga subsitusi dengan number seperti di bawah*/
+        const nilai = 90;
+        const template2 = `Name : ${name}, Lulus: ${nilai>75}`;
+        console.info(template2);
+
+    </script>
+</body>
+
+</html>

@@ -14,7 +14,7 @@
 
         let arrayNama=["Stefanus","Daeli"];
 
-        /*Menamahkan data di array kosong
+        /*Menambahkan data di array kosong
         dengan function push()*/
 
         const names = [];
@@ -22,6 +22,41 @@
         names.push("Daeli",27);
 
         console.table(names);
+
+        /*Menampilkan data array berdasarkan index*/
+
+        console.info(names[0]);
+        console.info(names[1]);
+
+        /*Mengubah data array */
+
+        names[0]="programmer";
+        console.table(names);
+
+        /*Hapus data array*/
+
+        delete names[2];
+        console.table(names);
+
+        names.push("11");
+        console.table(names);
+
+        /*Data array yang barusan du hapus
+        bisa ditambahkan lagi melalui index*/
+
+        names[2] = "Data yang dihapus";
+        console.table(names);
+
+        /*Perlu di ingat!!
+        tidak ada batasan tipe data saat 
+        memasukkan bahkan array ke dalam array(Multi dimensi)
+        */
+
+
+
+
+
+
     </script>
 </body>
 </html>

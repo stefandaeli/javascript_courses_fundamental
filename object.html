@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+
+<body>
+    <script>
+        /*Object dengan data kosong*/
+        const person = {};
+
+
+        /*Menambah atau mebgubah properti/atributes*/
+        person["nama"] = "Stefanus Daeli";
+        person["alamat"] = "Yogyakarta";
+        person["umur"] = 20;
+
+        console.table(person);
+
+        /*Menghapus Atribute*/
+
+        delete person["umur"];
+        console.table(person);
+
+        /*Object dengan data 
+        lebih practice*/
+        const orang = {
+            /*jika atribute lebih dari satu kata bisa menggunkan string*/
+            "Nama Lengkap": "Stefanus Daeli", 
+            nama: "Stefan",
+            nim: "2142101962",
+            kelas: "2"
+        };
+
+        console.table(orang);
+
+        /*Mengakses object dengan string
+        template*/
+
+        console.info(`Nama : ${orang.nama}`);
+        console.info(`Umur : ${orang["Nama Lengkap"]}`); //Jika atribute nya 2 kata
+        console.info(`Nim : ${orang.nim}`);
+
+
+
+
+    </script>
+</body>
+
+</html>

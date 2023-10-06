@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator ternary</title>
+</head>
+<body>
+    <script>
+       //if statement
+        const nilai=prompt("Masukkan Nilai");
+        let ucapan;
+
+        if(nilai>75){
+            ucapan = "Selamat anda lulus";
+        }else{
+            ucapan = "maaf";
+        }
+        document.writeln(`<p>${ucapan}</P>`);
+
+        /*ternary bisa digunakan untuk
+        menyderhanakan if*/
+        ucapan = nilai >= 75 ? "selamat anda lulus": "silahkan coba lagi";
+        document.writeln(`<p>${ucapan}</P>`);
+
+    </script>
+</body>
+</html>

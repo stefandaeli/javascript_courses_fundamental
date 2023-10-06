@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undifined</title>
+</head>
+<body>
+    <script>
+        /*variabel yang belum menentukan tipe
+        datanya maka default nya tipe data
+        nya adalah undifined*/
+        let name;
+
+        if(name === undefined){
+            console.info("undifined");
+        }else{
+            console.info("difined");
+        }
+
+        /*Kasusnya di array*/
+        const names = ["Stefanus","Daeli"];
+
+        if(names[2]===undefined){
+            alert("UNDEFINED");
+        }else{
+            alert("DEFINED");
+        }
+
+        /*kasusnya di object*/
+
+        const person = {
+            nama:"Stefan"
+        };
+        if(person===undefined){
+            console.info("undefined")
+        }else{
+            console.info(`Hello ${person}`);
+        }
+
+    </script>
+</body>
+</html>

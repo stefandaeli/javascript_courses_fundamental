@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In</title>
+</head>
+<body>
+    <script>
+        /*In digunakan untuk menegecek apakah
+        ada/tidak atribute dalan sebuah object.
+        in hanya mengecek properti/index(array) nya
+        bukan value nya*/
+        const person = {
+            firstName : "Stefan",
+            lastName : "Daeli"
+        };
+        const result = "firstName" in person; //true
+        document.writeln(`<p>${result}</p>`);
+        const result1 = "midName" in person; //false
+        document.writeln(`<p>${result1}</p>`);
+
+        if("firstName" in person){
+            alert(`hallo ${person.firstName}`);
+        }else{
+            alert('tidal ada properti')
+        }
+
+        const names = [null,"stefan",null];
+        const result2 = 0 in names; //true
+        document.writeln(`<p>${result}</p>`); 
+
+
+    </script>
+</body>
+</html>

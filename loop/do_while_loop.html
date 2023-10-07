@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do While Loop</title>
+</head>
+<body>
+    <script>
+        /*  pengecekan di do while loop dilakukan
+        setelah perulangan di lakukan.oleh karena itu
+        do while loop minimal sekali dilakukan meskipun nilainya
+        false*/
+         let counter=1; //nilainya keluar sekali meskipun nilainya false di perulangan
+         do{
+            document.write(`<p>perulangan do ke ${counter}</p>`);
+            counter+=2; //setiap penambahan increment berjumlah 2
+         }while(counter<=10);
+    </script>
+</body>
+</html>

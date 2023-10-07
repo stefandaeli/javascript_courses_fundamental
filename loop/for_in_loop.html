@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For In Loop</title>
+</head>
+<body>
+    <script>
+        /*For in merupakan perulanagn for 
+        yang digunakan untuk mengiterasi seluruh data
+        properti di object atau index di array*/
+
+        const person ={
+            firsName : "Stefanus",
+            middleName : "Daeli",
+            lastName : "Dox"
+        };
+
+        //menyimpan person ke properti dan meloopingnya
+        for(const property in person){ 
+            //Mengakses properti + valuenya
+            document.write(`<p>${property} : ${person[property]}</p>`);
+        }
+
+        const names = ["Stefanus","Daeli"];
+         for(const index in names){
+            document.write(`<p>${index} : ${names[index]}</p>`);
+
+         }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Of Loop</title>
+</head>
+
+<body>
+    <script>
+        /*For of bisa digunakan di semua tipe data kecuali
+        tipe data object karena tidak iterable*/
+        /*Iterable = urutan string dan angka pada tipe 
+        data yang ada (list, tuple, 
+        dictionary, set, dan lain-lain) Key [opsional] berfungsi sebagai 
+        kunci perbandingan untuk menentukan urutan.*/
+
+        const names = ["Stefanus", "Daeli", "Doxi"];
+
+        for (const name of names) {
+            document.writeln(`<p>${name}</p>`); //yang diambil adalah valuenya
+        }
+        const fullName="Stefanus Daeli";
+        for (const character of fullName) {
+            //Mengambil setiap huruf dari variabel fullName
+            //bertipe data string
+            document.writeln(`<p>${character}</p>`); 
+        }
+    </script>
+</body>
+
+</html>

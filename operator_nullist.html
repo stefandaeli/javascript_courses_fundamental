@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Nullist Coalescing</title>
+</head>
+<body>
+    <script>
+        let parameter = "Stefan";
+
+
+        /*Operator Nullist (??) membantu kita untuk
+        menjalakan sebuah kondisi null/undefined
+        yang lebih sederhana
+        dibanding if.*/
+
+        let data = parameter ?? "nilai default";
+        document.writeln(`<p>${parameter}</p>`);
+    </script>
+</body>
+</html>

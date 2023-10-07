@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Or</title>
+</head>
+<body>
+    <script>
+        /*or di cek dari kiri ke kanan.
+        jika nilai kiri nya truthy itu yang di ambil
+        sedangkan kalau nilainya falsy akan geser ke kanan
+        dan seterusnya sampai dapat truthy */
+    console.info("Hello" || ''); //hello
+    console.info("" || []); //[]
+    console.info("0" || "Nol"); //0 karena di ambil dari kiri ke kanan
+    console.info(0 || "nol"); //nol
+    console.info(null || "NULL"); //NULL yang ada di dlm string
+    /*kalo dua2 nya falsy maka diambil
+    niali yang paling terakhir*/
+    console.info(0 || false); //false
+
+    /*contoh di dalam variable*/
+    const person = {
+        firstName : "Stefanus",
+        lastName : "Daeli"
+    }
+
+    const name = person.firstName || person.lastName; 
+    console.info(name); //person.firstName karena nilainya truthy
+
+    
+
+
+
+    </script>
+</body>
+</html>

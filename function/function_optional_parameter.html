@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*Secara default parameter function
+        adalah optional value.jika tidak ada
+        data yang diisi defaultnya undefined*/
+        function sayHello(firstName, middleName, lastName) {
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+
+        }
+        sayHello();
+        sayHello("Stefanus");
+        sayHello("Stefanus", "daeli");
+        sayHello("Stefanus", "daeli", "Dox");
+        //data yang lebih otomatis gak di ikutkan
+        sayHello("Stefanus", "daeli", "Dox", "Jaka");
+
+
+
+    </script>
+
+</body>
+
+</html>

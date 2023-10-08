@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Parameter</title>
+</head>
+
+<body>
+    <script>
+        /*Rest parameter adalah fitur dimana 
+        kita bisa mengirim data sebanyak
+        mungkin pada satu parameter, dan
+        secara otomatis akan dikonversi menjadi
+        array*/
+        //rest parameter hanya ada 1 di function
+        //hanya boleh boleh beradi di posisi paling akhir
+
+        function sum(name,...data) { //...data adalah rest parameter
+            let total = 0;
+            for (const item of data) {
+                total += item;
+            }
+            document.writeln(`<p>Total ${name} is ${total}</p>`); 
+        }
+        //setelah banana adalah valuenya rest parameter
+        sum("Banana",20,12,12,23,23,45,56);
+        sum("Apple",23,232,45,13,24,5,56,7,7,88);
+    </script>
+</body>
+
+</html>

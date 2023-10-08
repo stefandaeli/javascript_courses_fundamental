@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Function</title>
+</head>
+<body>
+    <script>
+        /*Nested function adalah function di 
+        dalam function.function yang berada
+        di dalam disebuat inner function*/
+        /*inner tidak bisa di akses di luar
+        outer nya atau function dimana dia berada*/
+        function outer(){
+            function inner(){
+                document.writeln("Hello");
+            };
+            inner();
+        };
+        outer(); //Hello
+        // inner(); // tidak didefinisikan
+
+
+
+    </script>
+</body>
+</html>

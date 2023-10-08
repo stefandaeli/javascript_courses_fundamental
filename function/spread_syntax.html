@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Syntax</title>
+</head>
+<body>
+    <script>
+        /*Jika sudah terlanjut membuat array
+        kita bisa menggunakan spread syntax
+        untuk mengirim array ke rest parameter*/
+        function sum(name,...data) { //...data adalah rest parameter
+            let total = 0;
+            for (const item of data) {
+                total += item;
+            }
+            document.writeln(`<p>Total ${name} is ${total}</p>`); 
+        }
+        //setelah banana adalah valuenya rest parameter
+        let values = [2,3,456,6,77,54,32,21];
+        sum("Banana",...values); //...values adalah spread syntax
+    </script>
+</body>
+</html>

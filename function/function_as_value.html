@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function_as_value</title>
+</head>
+<body>
+    <script>
+        /*function bisa juga di simpan 
+        di variable, bisa juga dikirim
+        melalui parameter ke function lainya*/
+        function sayHello(name){
+            document.writeln(`<p>Hello ${name}</p>`);
+        }
+        sayHello("stefan");
+        /*jika di function sebagai value 
+        maka tidak perlu buka kurung 
+        di akhir nama function*/
+        let say = sayHello; 
+
+        say("Daeli");
+
+        // function di parameter
+        function giveMeName(callback){
+            callback("Stefanus Daeli"); //sayHello Stefanus
+        }
+        giveMeName(sayHello);
+    </script>
+</body>
+</html>

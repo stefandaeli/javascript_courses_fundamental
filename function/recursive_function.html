@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursive Function</title>
+</head>
+<body>
+    <script>
+        /*Recursive Function adalah kemampuan
+        function memanngil dirinya sendiri*/
+
+        //factorial dengan perulangan
+        function factorial(value){
+            let result = 1;
+            for(let i=1; i<=value; i++){
+                result *= i;
+            }
+            return result;
+        }
+        console.info(factorial(7));
+        console.info(1*2*3*4*5*6*7); //factorial scr manual
+
+        //factorial dengan recursive function
+        function factorialRecursive(value){
+            if(value===1){
+                return 1;
+            }else{
+                return value * factorialRecursive(value - 1);
+            }
+        }
+        console.info(factorialRecursive(5));
+        //cara kerja factorialRecursive
+        //5(value) * factorialRecursive (value - 1=4)
+        //5(value) *4 factorialRecursive (value - 1=3)
+        //5(value) *4*3 factorialRecursive (value - 1=2)
+        //5(value) *4*3*2 factorialRecursive (value - 1=1)
+        //5(value) *4*3*2*1 //berhenti karena return nya 1
+        //jadi : 5*4*3*2*1 =120
+
+
+
+    </script>
+</body>
+</html>

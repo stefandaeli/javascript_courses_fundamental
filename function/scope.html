@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+
+<body>
+    <script>
+        /*Scope merupakan area akses sebuah data.
+        jika membuat function, maka akan
+        membuat local scope untuk funcion tersebut*/
+
+        //global scope
+        let counter = 0;
+        function hitMe() {
+            //local scopee function hitMe
+            // counter bisa di akses karena function ini berada di globar scope
+            counter++; 
+        }
+        function other(){
+            //local scope  function other
+        }
+        hitMe();
+        hitMe();
+        console.info(counter);
+
+        function first(){
+            let firstvariable = "first";
+
+            function firstNested(){
+                console.info(firstvariable);
+                
+            }
+            firstNested();
+
+        }
+        function second(){
+            let secondVariable ="second";
+        }
+        //tidak bisa di akses karena firstVariable berada di local scope
+        //console.info(firstvariable); 
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+
+<body>
+    <script>
+        /*Arrow function adalah alternatif pembuatan function yang lebih sederhana dari function biasanya
+            Namun terdapat limitasi dan juga tidak bisa digunakan di semua situasi
+            Dinamakan arrow function karena menggunakan tanda => (seperti panah)
+            Berikut contoh beberapa kekurangan arrow function :
+            tidak memiliki fitur arguments object
+            tidak bisa menggunakan function generator
+            tidak bisa mengakses this (yang nanti akan dibahas di function di object)
+            tidak bisa mengakses super (yang nanti akan dibahas di JavaScript Object Oriented Programming)
+        */
+
+
+        const sayHello = (name) => {
+            const say = `Hello ${name}`;
+            console.info(say);
+        };
+        sayHello("Stefan");
+        /*Jika sebuah arrow function isinya sederhana, misal hanya satu baris
+        Kita bisa membuat arrow function tanpa harus menggunakan block
+        */
+        const sayHello2 = (name2) => console.info(`Hello ${name2}`);
+        sayHello2("Daeli");
+    </script>
+</body>
+
+</html>

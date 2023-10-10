@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Generator</title>
+</head>
+
+<body>
+    <script>
+        /* Function generator adalah function yang digunakan untuk membuat data generator
+        Generator adalah data yang bisa di interasi seperti Array
+        Untuk membuat function generator, kita perlu menggunakan tanda * (bintang) setelah kata function
+        Dan untuk mengembalikan data di tiap iterasi, kita bisa gunakan kata kunci yield diikuti datanya
+         */
+        /*Generator itu sifatnya lazy
+        Jadi artinya jika kita tidak data 
+        belum kita ambil dari generator, 
+        maka yield selanjutnya tidak akan di eksekusi
+*/
+
+        function* createNames() {
+            yield "Stefanus";
+            yield "Daeli";
+            yield "Diox";
+
+        };
+        console.info(createNames()); //tdk bisa di akses seperti ini
+
+        const names = createNames();
+        for (const name of names) {
+            console.info(name);
+        };
+
+        //lazy
+        function* buatGanjil(value) {
+            for (let i = 1; i <= value; i++) {
+                if (i % 2 === 1) {
+                    document.writeln(`Yield ${i}`)
+                    yield i;
+                }
+            }
+        }
+        //eager
+        function buatGanjilArray(value) {
+            const result = [];
+            for (let i = 1; i <= value; i++) {
+                if (i % 2 === 1) {
+                    console.info(`Yield ${i}`)
+                    result.push(i);
+                }
+            }
+            return result;
+        }
+
+        buatGanjilArray(100);
+
+        const angkaGanjil = buatGanjil(100);
+        for (const angka of angkaGanjil) {
+            document.writeln(angka);
+        }
+        const angkaGanjil2 = buatGanjil(100);
+        console.info(angkaGanjil2.next().value); //1
+        console.info(angkaGanjil2.next().value); //3
+        console.info(angkaGanjil2.next().value); //5
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -30,6 +30,43 @@
         */
         const sayHello2 = (name2) => console.info(`Hello ${name2}`);
         sayHello2("Daeli");
+
+        /*Arrow function bisa mengembalikan value, sama seperti function biasanya
+Jika menggunakan block, maka kita perlu menggunakan kata kunci return
+Jika tidak menggunakan block, kita tidak perlu menggunakan kata kunci return 
+*/
+
+        //arrow function dengan return
+        //arrow function lebih direkomendasikan oleh dev js
+        const sum = (first, second) => {
+            return first + second;
+        };
+
+        const sum2 = (first, second) => first + second; //satu baris lebih simplel
+
+        console.info(`Total :${sum2(100, 100)}`);
+        console.info(sum(100, 100));
+
+        //Arrow Function Tanpa Kurung Parameter
+        /*Jika parameter di arrow function hanya satu, kita bisa tidak menggunakan kurung pada parameter
+        */
+
+        const sayHello3 = name3 => console.info(`Hello ${name3}`);
+        sayHello3("Stefanus Daeli");
+
+        //Arrow Function Sebagai Parameter
+        /*Karena arrow function sama seperti anonymous function
+        Jadi kita juga bisa menggunakan arrow function sebagai parameter di function lain
+        */
+
+        function giveMeName(callback) {
+            callback("Stefanus Daeli")
+        }
+        giveMeName(name =>console.info(`Hello ${name}`));//tanpa tanda kurung parameter
+        //versi anonymus function
+        // giveMeName(function (name) {
+        //     console.info(`Hello ${name}`);
+        // });
     </script>
 </body>
 

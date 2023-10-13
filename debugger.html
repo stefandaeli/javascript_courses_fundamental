@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*Debugger digunakan untuk melakukan proses debugging
+Debugging adalah proses mencari bug (masalah) yang biasa 
+terjadi di kode program kita
+Dengan debugger kita bisa menghentikan kode program di posisi yang 
+kita inginkan (breakpoint), lalu melihat semua isi 
+variable yang ada pada saat kode program sedang berhenti
+*/
+        function createFullName(firsName, middleName, lastName) {
+            debugger; //debugger keyword
+            const fullName =`${firsName},${middleName},${lastName}`
+            return fullName;
+        }
+        const name =createFullName("Stefan","Daeli","Diox")
+        console.info(name);
+    </script>
+</body>
+
+</html>
